@@ -17,3 +17,8 @@ SELECT
     MAX(daily_sales) OVER (ORDER BY sale_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS max_so_far
 FROM transactions
 ORDER BY sale_date;
+
+Interpretation: 
+The running total shows cumulative revenue over time.
+ROWS(): counts physical rows, while RANGE groups values by ranges (e.g., all with same date).
+Min() and max(): columns track the lowest and highest daily sales so far.
