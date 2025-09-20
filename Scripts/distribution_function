@@ -7,3 +7,9 @@ CUME_DIST() over (order by sum(amount) desc ) as cumulative_distribution
 FROM transactions
 GROUP BY customer_id
 ORDER BY total_revenue DESC;
+
+
+Interpretation:
+NTILE(4):  splits customers into four equal groups (quartiles).
+CUME_DIST(): shows what fraction of customers fall below or at a given revenue level.
+This helps identify high-value vs low-value customer groups.
