@@ -88,19 +88,36 @@ Top customers are concentrated in Kigali and often purchase higher-priced appare
 
 ---
 
-## 7. References (minimum 10)
-1. MySQL 8.0 Reference Manual — Window Functions.  
-2. MySQL Blog — Introducing Window Functions.  
-3. Oracle Docs — Analytic (Window) Functions (conceptual background).  
-4. Percona Blog — Window Functions in MySQL 8.0.  
-5. LearnSQL — RANGE Clause in Window Functions.  
-6. devart — MySQL Window Functions tutorial.  
-7. Modern-SQL (caniuse) — RANGE BETWEEN with datetime.  
-8. GeeksforGeeks — MySQL Window Functions overview.  
-9. W3Schools — SQL Window Functions (examples).  
-10. Course lecture slides / class notes.
+**References (APA style)**
 
+1. MySQL. (2025). MySQL 8.0 Reference Manual: Window Functions. Oracle Corporation. 
+Retrieved from https://dev.mysql.com/doc/refman/8.0/en/window-functions.html
 
+2. MySQL. (n.d.). Introducing window functions. MySQL Blog. 
+Retrieved from https://mysqlserverteam.com/introducing-window-functions-in-mysql-8-0/
+
+3. Oracle. (n.d.). Analytic (window) functions. Oracle Documentation.
+Retrieved from https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/analytic-functions.html
+
+4. Percona. (2020). Window functions in MySQL 8.0. Percona Blog.
+Retrieved from https://www.percona.com/blog/2020/06/22/window-functions-in-mysql-8-0/
+
+5. LearnSQL. (n.d.). MySQL RANGE clause in window functions. 
+Retrieved from https://learnsql.com/blog/range-clause-window-functions/
+
+6. Devart. (n.d.). MySQL window functions tutorial.
+Retrieved from https://www.devart.com/dbforge/mysql/studio/windows-functions.html
+
+7. Modern-SQL. (n.d.). RANGE BETWEEN with datetime in MySQL.
+Retrieved from https://modern-sql.com/feature/window-functions-range-between
+
+8. GeeksforGeeks. (2022). MySQL window functions overview. 
+Retrieved from https://www.geeksforgeeks.org/window-functions-in-mysql/
+
+9. W3Schools. (n.d.). SQL window functions.
+Retrieved from https://www.w3schools.com/sql/sql_window.asp
+
+10. AUCA Course. (2024_2025). Database Management Systems lecture slides / class notes. African University of Central Africa.
 ---
 
 ## 8. Integrity Statement
