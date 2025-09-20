@@ -1,0 +1,79 @@
+CREATE DATABASE IF NOT EXISTS bussiness;
+USE bussiness;
+
+-- Parent tables must be created first
+DROP TABLE IF EXISTS transactions;
+DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS products;
+
+CREATE TABLE customers (
+    c_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    region VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE products (
+    p_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+);
+
+CREATE TABLE transactions (
+    t_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT NOT NULL,
+    product_id INT NOT NULL,
+    sale_date DATE NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    CONSTRAINT FOREIGN KEY (customer_id) REFERENCES customers(c_id)
+        ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FOREIGN KEY (product_id) REFERENCES products(p_id)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+-- sample customers information
+
+INSERT INTO customers (c_id, name, region) VALUES
+('1002', 'Mugwaneza Alice', 'kigali'),
+('1000', 'Murenzi Kali', 'Musanze'),
+('1001', 'John Doe', 'Musanze'),
+('1003', 'Mukiza Nepo', 'kigali'),
+('1004', 'Teta Bracia', 'huye'),
+('1005', 'Tona Brune', 'huye');
+
+-- sample products information
+
+INSERT INTO products (p_id, name, category) VALUES
+('2000', 'winter jacket', 'warm cloth'),
+('2001', 'raincoat', 'warm cloth'),
+('2002', 'shorts', 'light cloth'),
+('2003', 'T-shirt', 'light cloth'),
+('2004', 'jeans', 'mixed cloth'),
+('2005', 'summer dress', 'light cloth'),
+('2006', 'Shirts', 'mixed cloth');
+
+--sample transactions information across multiple dates and customers
+
+INSERT INTO transactions (t_id, customer_id, product_id, sale_date, amount) VALUES
+('', '1003', '2000', '2025-09-20', '40.00'),
+('1', '1000', '2001', '2025-09-01', '10.00'),
+('10', '1004', '2004', '2025-09-20', '17.0'),
+('11', '1004', '2006', '2025-09-20', '21.0'),
+('12', '1005', '2005', '2025-09-20', '17.0 '),
+('13', '1005', '2006', '2025-09-20', '25.0'), 
+('15', '1002', '2006', '2025-09-20', '25.0'), 
+('16', '1001', '2006', '2025-09-20', '22.0'), 
+('17', '1002', '2006', '2025-09-20', '25.0 '),
+('18', '1003', '2006', '2025-09-20', '24.0'), 
+('19', '1004', '2006', '2025-09-20', '21.0'), 
+('2', '1003', '2001', '2025-09-02', '25.00'), 
+('20', '1005', '2006', '2025-09-20', '23.0'), 
+('3', '1002', '2000', '2025-09-03', '40.00'), 
+('4', '1004', '2004', '2025-09-04', '20.00'), 
+('5', '1003', '2000', '2025-09-20', '40.00'), 
+('6', '1003', '2001', '2025-09-20', '20.0'), 
+('7', '1003', '2001', '2025-09-20', '20.0'), 
+('8', '1000', '2002', '2025-09-20', '15.0'), 
+('9', '1000', '2004', '2025-09-20', '15.0');
+
+
+
