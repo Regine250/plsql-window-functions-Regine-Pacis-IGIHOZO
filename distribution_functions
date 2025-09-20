@@ -1,0 +1,9 @@
+-- scripts/distribution_functions.sql
+  
+Select customer_id,
+sum(amount) AS total_revenue,
+NTILE(4) OVER (ORDER BY SUM (amount)DESC) AS quartile,
+CUME_DIST() over (order by sum(amount) desc ) as cumulative_distribution 
+FROM transactions
+GROUP BY customer_id
+ORDER BY total_revenue DESC;
