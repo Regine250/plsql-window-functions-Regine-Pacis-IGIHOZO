@@ -10,3 +10,8 @@ SELECT
 FROM transactions
 GROUP BY customer_id
 ORDER BY total_revenue DESC;
+
+Interpretation:
+ROW_NUMBER():  gives each row a unique order.
+RANK() and DENSE_RANK():  handle ties differently (RANK skips numbers, DENSE_RANK does not).
+PERCENT_RANK():  shows a customer’s relative standing in the group.
