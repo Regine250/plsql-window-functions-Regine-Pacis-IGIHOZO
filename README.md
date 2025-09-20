@@ -46,3 +46,71 @@ Product_id (PK)	name	category
 Transactions
 Transaction_id (PK)	Customer_id (FK)	Product_id (FK)	sale_date	amount
 
+
+---
+
+## 4. Queries
+All SQL scripts are in `/scripts/`:
+- `create_schema.sql` — schema + sample data
+- `ranking_functions.sql`
+- `aggregate_functions.sql`
+- `navigation_functions.sql`
+- `distribution_functions.sql`
+
+(Each script contains comments and is ready to run in MySQL / XAMPP)
+
+---
+
+## 5. Screenshots
+Folder: `/screenshots/`  
+Include clear screenshots for each query: ranking, aggregate, navigation, distribution:
+- `ranking.png`
+- `aggregate.png`
+- `navigation.png`
+- `distribution.png`
+
+> Ensure the result columns and window-function outputs are visible in each screenshot.
+
+---
+
+## 6. Results Analysis (3 layers)
+
+### Descriptive
+Sales are moderately concentrated: a few customers and products generate a majority of revenue. Daily sales show occasional spikes with several low-volume days.
+
+### Diagnostic
+Top customers are concentrated in Kigali and often purchase higher-priced apparel (jackets, dresses). Spikes align with product launches or promotions (data shows clustered high-value transactions).
+
+### Prescriptive
+1. Prioritize inventory for top quartile SKUs and customers (reorder point & safety stock).  
+2. Target top- and second-quartile customers with retention offers and cross-sell campaigns.  
+3. Use 7-day / 3-month moving averages for ordering cadence; flag days with sudden negative growth for review.
+
+---
+
+## 7. References (minimum 10)
+1. MySQL 8.0 Reference Manual — Window Functions.  
+2. MySQL Blog — Introducing Window Functions.  
+3. Oracle Docs — Analytic (Window) Functions (conceptual background).  
+4. Percona Blog — Window Functions in MySQL 8.0.  
+5. LearnSQL — RANGE Clause in Window Functions.  
+6. devart — MySQL Window Functions tutorial.  
+7. Modern-SQL (caniuse) — RANGE BETWEEN with datetime.  
+8. GeeksforGeeks — MySQL Window Functions overview.  
+9. W3Schools — SQL Window Functions (examples).  
+10. Course lecture slides / class notes.
+
+> (Add links and full citations in the README when you finalize.)
+
+---
+
+## 8. Integrity Statement
+All sources were properly cited. Implementations and analysis represent original work. No AI-generated content was copied without attribution or adaptation.
+
+---
+
+## 9. Submission template (email)
+To: eric.maniraguha@auca.ac.rw  
+Subject: Repository Submission — plsql-window-functions-[lastname]-[firstname]
+
+Body:
