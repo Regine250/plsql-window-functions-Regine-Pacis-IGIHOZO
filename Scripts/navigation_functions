@@ -10,3 +10,8 @@ SELECT
            NULLIF(LAG(daily_sales) OVER (ORDER BY sale_date), 0) * 100, 2) AS growth_pct_vs_prev
 FROM transactions
 ORDER BY sale_date;
+
+Interpretation:
+LAG(): lets us compare today’s sales with yesterday’s.
+LEAD():  looks at the next period’s sales.
+The growth_percent column shows period-to-period change.
