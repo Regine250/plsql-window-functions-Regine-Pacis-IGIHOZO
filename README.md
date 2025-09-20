@@ -100,17 +100,8 @@ Top customers are concentrated in Kigali and often purchase higher-priced appare
 9. W3Schools — SQL Window Functions (examples).  
 10. Course lecture slides / class notes.
 
-> (Add links and full citations in the README when you finalize.)
 
 ---
 
 ## 8. Integrity Statement
 All sources were properly cited. Implementations and analysis represent original work. No AI-generated content was copied without attribution or adaptation.
-
----
-
-## 9. Submission template (email)
-To: eric.maniraguha@auca.ac.rw  
-Subject: Repository Submission — plsql-window-functions-[lastname]-[firstname]
-
-Body:
