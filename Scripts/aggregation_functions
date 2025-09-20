@@ -1,0 +1,19 @@
+-- scripts/aggregate_functions.sql
+SELECT
+    sale_date,
+    daily_sales,
+    -- Running total using ROWS (cumulative by row order)
+    SUM(daily_sales) OVER (
+        ORDER BY sale_date
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS running_total_rows,
+    -- 7-day moving average using RANGE relative to date (includes dates within 6 days before)
+    AVG(daily_sales) OVER (
+        ORDER BY sale_date
+        RANGE BETWEEN INTERVAL 6 DAY PRECEDING AND CURRENT ROW
+    ) AS avg_last_7_days_range,
+    -- min & max so far
+    MIN(daily_sales) OVER (ORDER BY sale_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS min_so_far,
+    MAX(daily_sales) OVER (ORDER BY sale_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS max_so_far
+FROM transactions
+ORDER BY sale_date;
