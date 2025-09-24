@@ -1,6 +1,4 @@
-# SQL-PL
-# PL/SQL Window Functions — [Lastname] [Firstname]
-Repository: plsql-window-functions-[lastname]-[firstname]
+ Repository: PL/SQL Window Functions — Regine-pacis-IGIHOZO 
 
 ## 1. Problem Definition (Business Scenario)
 **Business context:** A mid-sized clothing company in Rwanda specializing in locally made apparel seeks to enhance its inventory management and sales forecasting processes.  
