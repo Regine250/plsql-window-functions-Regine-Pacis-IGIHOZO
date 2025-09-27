@@ -1,12 +1,1 @@
--- scripts/navigation_functions.sql
--- Purpose: compare each day to prior and next day and compute growth percent.
-SELECT
-    sale_date,
-    daily_sales,
-    LAG(daily_sales) OVER (ORDER BY sale_date) AS prev_day_sales,
-    LEAD(daily_sales) OVER (ORDER BY sale_date) AS next_day_sales,
-    -- Growth percent vs previous day (NULL-safe)
-    ROUND( (daily_sales - LAG(daily_sales) OVER (ORDER BY sale_date)) /
-           NULLIF(LAG(daily_sales) OVER (ORDER BY sale_date), 0) * 100, 2) AS growth_pct_vs_prev
-FROM transactions
-ORDER BY sale_date;
+
