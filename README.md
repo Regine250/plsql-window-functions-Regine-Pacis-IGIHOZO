@@ -51,7 +51,9 @@ Key Columns	transaction_id (PK), customer_id (FK), product_id (FK), sale_date, a
 Example Row	3001, 1001, 2001, 2024-01-15, 25000
 
 ER Diagram
+
 <img width="484" height="155" alt="image" src="https://github.com/user-attachments/assets/775af207-de70-4bb5-836f-3ee9dfd74545" />
+
 
 An ER diagram can visually represent these relationships, showing how customers, products, and transactions are interconnected:
 Customers:customer_id is the primary key.
